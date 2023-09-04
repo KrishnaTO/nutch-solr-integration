@@ -19,7 +19,7 @@ This example can be used for many purposes:
 docker-compose up
 ```
 
-## How it works
+## How it works 
 A default Solr instance with the default "mycore" core is used to store Nutch crawling results.
 The approach of this PoC is to use as less custom configuration as possible so it can be used as a starting point for other uses.
 Some important files:
