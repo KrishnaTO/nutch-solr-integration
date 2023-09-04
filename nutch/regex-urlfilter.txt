@@ -16,8 +16,7 @@
 
 # accept http://nutch.apache.org
 #+^https?://([a-z0-9-]+\.)*nutch\.apache\.org/
-+^https://hibid.com/ontario/lot/*
-+^https://hibid.com/ontario/catalog/*
++^https://www.canada.ca/en/revenue-agency/services/forms-publications/
 
 # deny anything else
 -.
