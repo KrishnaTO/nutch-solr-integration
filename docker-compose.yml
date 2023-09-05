@@ -17,7 +17,7 @@ services:
     environment: 
       - JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
     working_dir: /root/nutch
-    command: '/root/nutch/bin/crawl -i -D solr.server.url=http://solr:8983/solr/mycore -s urls crawl 10'
+    command: '/root/nutch/bin/crawl -i -D solr.server.url=http://solr:8983/solr/mycore -s urls crawl 3'
     volumes:
         - ./nutch/index-writers.xml:/root/nutch/conf/index-writers.xml
         - ./nutch/nutch-site.xml:/root/nutch/conf/nutch-site.xml

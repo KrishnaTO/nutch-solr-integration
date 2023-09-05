@@ -33,7 +33,7 @@
 
 <property>
  <name>fetcher.max.crawl.delay</name>
- <value>-1</value>
+ <value>5</value>
  <description>
  If the Crawl-Delay in robots.txt is set to greater than this value (in
  seconds) then the fetcher will skip this page, generating an error report. If set to -1 the fetcher will never skip such pages and will wait the amount of time retrieved from robots.txt Crawl-Delay, however long that might be.
@@ -60,4 +60,36 @@
 <description> At the very least, I needed to add the parse-html, urlfilter-regex, and the indexer-solr.
 </description>
  </property>
+
+ <property>
+  <name>fetcher.server.delay</name>
+  <value>5.0</value>
+  <description>The number of seconds the fetcher will delay between
+   successive requests to the same server. Note that this might get
+   overridden by a Crawl-Delay from a robots.txt and is used ONLY if
+   fetcher.threads.per.queue is set to 1.
+   </description>
+  </property>
+
+  <property>
+  <name>fetcher.threads.per.queue</name>
+  <value>3</value>
+  <description>This number is the maximum number of threads that
+    should be allowed to access a queue at one time. Setting it to
+    a value > 1 will cause the Crawl-Delay value from robots.txt to
+    be ignored and the value of fetcher.server.min.delay to be used
+    as a delay between successive requests to the same server instead
+    of fetcher.server.delay.
+   </description>
+  </property>
+  <property>
+  <name>fetcher.threads.fetch</name>
+  <value>10</value>
+  <description>The number of FetcherThreads the fetcher should use.
+  This is also determines the maximum number of requests that are
+  made at once (each FetcherThread handles one connection). The total
+  number of threads running in distributed mode will be the number of
+  fetcher threads * number of nodes as fetcher has one map task per node.
+  </description>
+  </property>
 </configuration>

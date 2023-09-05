@@ -1,12 +1,19 @@
 # TODO
 
-- Reduce iterations to 3 for CRA links - Publications
-- Reduce time between fetches to 0.5
-- 
+- Reduce iterations to 3 for CRA links - Publications [updated in nutch-solr-integration/docker-compose.yml]
+- Reduce time between fetches to 0.5 [updated to 1 s in nutch-solr-integration/nutch/nutch-site.xml]
+    - queue crawl delay still set at 5000ms
+        - use `fetcher.server.delay` to shorten the time between page fetches and use `fetcher.threads.per.queue` to increase the number of threads fetching for a single site (this would still be in the same map task though and hence the same JVM ChildTask process). If increasing this > 0 you could also set `fetcher.server.min.delay` to some value > 0 for politeness to min and max bound the process. [R1]
+        - map tasks * `fetcher.threads.fetch`. So 10 map tasks * 20 threads = 200 fetchers at once [R2]
+        
 
 # Issue
 
 - Second url (hibid) didn't activate
+
+# Resource 
+
+1. https://cwiki.apache.org/confluence/display/nutch/OptimizingCrawls
 
 ---------------------------------------
 # Apache Nutch and Apache Solr PoC on Docker Swarm
