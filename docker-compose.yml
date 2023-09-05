@@ -24,4 +24,4 @@ services:
         - ./nutch/regex-urlfilter.txt:/root/nutch/conf/regex-urlfilter.txt
         - ./nutch/seed.txt:/root/nutch/urls/seed.txt
 volumes:
-   data:
+   data:    # Solr data; update attempt to add permanent storage

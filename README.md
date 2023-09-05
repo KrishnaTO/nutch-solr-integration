@@ -1,3 +1,14 @@
+# TODO
+
+- Reduce iterations to 3 for CRA links - Publications
+- Reduce time between fetches to 0.5
+- 
+
+# Issue
+
+- Second url (hibid) didn't activate
+
+---------------------------------------
 # Apache Nutch and Apache Solr PoC on Docker Swarm
 An ultra small PoC to show how to combine Apache Nutch and Apache Solr, crawling through web pages and storing the results in Solr for quering
 
@@ -17,7 +28,7 @@ This example can be used for many purposes:
 ## How to use
 ```bash
 docker-compose up
-```
+``
 
 ## How it works 
 A default Solr instance with the default "mycore" core is used to store Nutch crawling results.
@@ -33,3 +44,4 @@ Some important files:
 
 ## Author
 * [Sebastiaan Raven](mailto:basraven@gmail.com)
+

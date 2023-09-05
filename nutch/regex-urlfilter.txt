@@ -19,11 +19,12 @@
 
 # CRA
 +^https://www.canada.ca/en/revenue-agency/services/forms-publications/
+-archive
 
 # Hibid
 +^https://hibid.com/ontario/lot/
 +^https://hibid.com/ontario/catalog/
--^https://hibid.com/ontario/livecatalog/
+-livecatalog/
 
 # deny anything else
 -.
