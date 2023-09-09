@@ -22,6 +22,7 @@
 -archive
 
 # Hibid
++^https://hibid.com/ontario/auctions
 +^https://hibid.com/ontario/lot/
 +^https://hibid.com/ontario/catalog/
 -livecatalog/
